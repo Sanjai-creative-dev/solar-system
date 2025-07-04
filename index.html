@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="loading">
+        <div class="loader"></div>
+        <p>Loading solar system...</p>
+    </div>
+
+    <div id="container"></div>
+    
+    <div id="ui">
+        <div id="controls">
+            <div id="globalSpeed" class="control-group">
+                <label>Global</label>
+                <input type="range" id="speedControl" min="0" max="10" step="0.1" value="1">
+                <span id="speedValue" class="value-display">1.0x</span>
+                <button id="toggleControls">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 9l6 6 6-6"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <div id="planetControls"></div>
+            
+            <button id="resetView">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M1 4v6h6"></path>
+                    <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
+                </svg>
+                Reset All
+            </button>
+        </div>
+    </div>
+
+    <div id="viewButtons">
+        <button class="view-button" data-view="default">Default View</button>
+        <button class="view-button" data-view="top">Top View</button>
+        <button class="view-button" data-view="side">Side View</button>
+        <button class="view-button" data-view="front">Front View</button>
+        <button class="view-button" data-view="sun">Sun Close-up</button>
+    </div>
+
+    <div id="planetInfo"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/loaders/TextureLoader.js"></script>
+    
+    <!-- script linking  -->
+    <script src="script.js"></script>
+</body>
+</html>
